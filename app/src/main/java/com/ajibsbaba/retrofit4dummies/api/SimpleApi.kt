@@ -12,6 +12,7 @@ interface SimpleApi {
 
     @GET("posts/{postNumber}")
     suspend fun getPost2(
+        @Header("Auth") auth: String,
         @Path("postNumber") number: Int
     ): Response<Post>
 
