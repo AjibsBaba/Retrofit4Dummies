@@ -6,6 +6,7 @@ import retrofit2.http.*
 
 interface SimpleApi {
 
+    @Headers("Content-Type: application/json")
     @GET("posts/1")
     suspend fun getPost(): Response<Post>
 
