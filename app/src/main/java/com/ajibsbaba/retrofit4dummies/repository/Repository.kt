@@ -21,4 +21,12 @@ class Repository {
     suspend fun getCustomPost2(userId: Int, options: Map<String, String>) : Response<List<Post>> {
         return RetrofitInstance.api.getCustomPost2(userId, options)
     }
+
+    suspend fun pushPost(post: Post) : Response<Post> {
+        return RetrofitInstance.api.pushPost(post)
+    }
+
+    suspend fun pushPostFormType(userId: Int, id: Int, title: String, body: String) : Response<Post> {
+        return RetrofitInstance.api.pushPostFormType(userId, id, title, body)
+    }
 }
