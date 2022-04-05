@@ -2,7 +2,6 @@ package com.ajibsbaba.retrofit4dummies.api
 
 import com.ajibsbaba.retrofit4dummies.util.Constants.Companion.BASE_URL
 import okhttp3.OkHttpClient
-import okhttp3.internal.tls.OkHostnameVerifier
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

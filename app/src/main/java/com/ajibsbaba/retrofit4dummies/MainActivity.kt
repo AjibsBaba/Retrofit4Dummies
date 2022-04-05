@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         val myPost = Post(2, 1, "Samuel Ajibade", "Retrofit 4 Dummies")
         viewModel.pushPost(myPost)
-        viewModel.myCustomPosts.observe(this, Observer { response ->
+        viewModel.myCustomPosts.observe(this, { response ->
             if (response.isSuccessful){
                 Log.d("Main", response.body().toString())
                 Log.d("Main", response.code().toString())
